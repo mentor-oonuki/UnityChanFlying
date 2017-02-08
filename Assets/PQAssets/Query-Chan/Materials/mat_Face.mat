@@ -8,8 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: mat_Face
   m_Shader: {fileID: 10751, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords:
-  - _UNLIT_ONOFF_ON
+  m_ShaderKeywords: []
   m_CustomRenderQueue: -1
   m_SavedProperties:
     serializedVersion: 2
@@ -23,9 +22,16 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _Main_Texture
+          name: _Tex
         second:
-          m_Texture: {fileID: 2800000, guid: 7dae6075f8212ca4c91a54f7f37e937a, type: 3}
+          m_Texture: {fileID: 2800000, guid: 3a24a64da515c4a70ad5153d5f4695e7, type: 3}
+          m_Scale: {x: 1, y: 1}
+          m_Offset: {x: 0, y: 0}
+      data:
+        first:
+          name: _Tex_Spec
+        second:
+          m_Texture: {fileID: 0}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -35,14 +41,26 @@ Material:
         second: .5
       data:
         first:
-          name: _Brightness
-        second: 1
+          name: _Rim_Val
+        second: 0
       data:
         first:
-          name: _Unlit_OnOff
-        second: 1
+          name: _Rim_Power
+        second: .785714209
+      data:
+        first:
+          name: _Spec_Area
+        second: .5
+      data:
+        first:
+          name: _Clip_Val
+        second: .5
     m_Colors:
       data:
         first:
           name: _Color
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _Rim_Color
         second: {r: 1, g: 1, b: 1, a: 1}

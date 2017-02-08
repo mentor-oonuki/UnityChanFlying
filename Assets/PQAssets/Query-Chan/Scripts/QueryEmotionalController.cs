@@ -41,13 +41,7 @@ public class QueryEmotionalController : MonoBehaviour {
 		SURPRISED_EYEOPEN_MOUTHCLOSE = 18,
 		SURPRISED_EYECLOSE_MOUTHOPEN = 19,
 		SURPRISED_EYEOPEN_MOUTHOPEN_MID = 20,
-		SURPRISED_EYECLOSE_MOUTHOPEN_MID = 21,
-
-		// Cold emotion
-		COLD = 22,
-
-		// Guruguru emotion
-		Guruguru = 23,
+		SURPRISED_EYECLOSE_MOUTHOPEN_MID = 21
 
 	}
 

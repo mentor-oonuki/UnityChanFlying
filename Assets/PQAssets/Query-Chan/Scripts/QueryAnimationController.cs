@@ -30,16 +30,7 @@ public class QueryAnimationController : MonoBehaviour {
 		FLY_ITEMGET_LOOP = 14,
 		FLY_DAMAGE = 15,
 		FLY_DISAPPOINTMENT = 16,
-		FLY_DISAPPOINTMENT_LOOP = 17,
-
-		// Attack on Query-Chan motion
-		AOQ_Idle = 18,
-		AOQ_REST_A = 19,
-		AOQ_REST_B = 20,
-		AOQ_WALK = 21,
-		AOQ_HIT = 22,
-		AOQ_GLAD = 23,
-		AOQ_WARP = 24
+		FLY_DISAPPOINTMENT_LOOP = 17
 
 	}
 
@@ -81,18 +72,6 @@ public class QueryAnimationController : MonoBehaviour {
 		case QueryChanAnimationType.FLY_DISAPPOINTMENT_LOOP:
 			changeHandPart (QueryChanHandType.STONE);
 			this.GetComponent<QueryEmotionalController>().ChangeEmotion(QueryEmotionalController.QueryChanEmotionalType.SAD_EYECLOSE_MOUTHOPEN);
-			break;
-
-		case QueryChanAnimationType.AOQ_Idle:
-		case QueryChanAnimationType.AOQ_WALK:
-		case QueryChanAnimationType.AOQ_WARP:
-		case QueryChanAnimationType.AOQ_REST_A:
-		case QueryChanAnimationType.AOQ_REST_B:
-			this.GetComponent<QueryEmotionalController>().ChangeEmotion(QueryEmotionalController.QueryChanEmotionalType.COLD);
-			break;
-
-		case QueryChanAnimationType.AOQ_HIT:
-			this.GetComponent<QueryEmotionalController>().ChangeEmotion(QueryEmotionalController.QueryChanEmotionalType.Guruguru);
 			break;
 
 		default:
