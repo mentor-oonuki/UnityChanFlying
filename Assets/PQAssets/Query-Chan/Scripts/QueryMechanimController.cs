@@ -112,11 +112,11 @@ public class QueryMechanimController : MonoBehaviour {
 		case QueryChanAnimationType.AOQ_WALK:
 		case QueryChanAnimationType.AOQ_REST_A:
 		case QueryChanAnimationType.AOQ_REST_B:
-			emoControl.ChangeEmotion(QueryEmotionalController.QueryChanEmotionalType.COLD);
+			// emoControl.ChangeEmotion(QueryEmotionalController.QueryChanEmotionalType.COLD);
 			break;
 
 		case QueryChanAnimationType.AOQ_HIT:
-			emoControl.ChangeEmotion(QueryEmotionalController.QueryChanEmotionalType.Guruguru);
+			// emoControl.ChangeEmotion(QueryEmotionalController.QueryChanEmotionalType.Guruguru);
 			break;
 
 		// Haloween
