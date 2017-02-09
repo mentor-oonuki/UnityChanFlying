@@ -21,7 +21,7 @@ public class ZRNGUIController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-		this.GetComponent<CameraController>().ChangeCamera(0);
+		this.GetComponent<_CameraController>().ChangeCamera(0);
 		operateCameraNumber = 0;
 		previousCameraNumber = 0;
 
@@ -109,23 +109,23 @@ public class ZRNGUIController : MonoBehaviour {
 					operateCameraNumber--;
 					if (operateCameraNumber < 0)
 					{
-						operateCameraNumber = this.GetComponent<CameraController>().targetCameraNames.Count -1;
+						operateCameraNumber = this.GetComponent<_CameraController>().targetCameraNames.Count -1;
 						previousCameraNumber = operateCameraNumber;
 					}
 				}
 				if (GUI.Button (new Rect (600, 60, 50, 40), "--->"))
 				{
 					operateCameraNumber++;
-					if (operateCameraNumber > this.GetComponent<CameraController>().targetCameraNames.Count -1)
+					if (operateCameraNumber > this.GetComponent<_CameraController>().targetCameraNames.Count -1)
 					{
 						operateCameraNumber = 0;
 						previousCameraNumber = operateCameraNumber;
 					}
 				}
-				GUI.Label (new Rect (460, 60, 140, 20), this.GetComponent<CameraController>().targetCameraNames[operateCameraNumber]);
+				GUI.Label (new Rect (460, 60, 140, 20), this.GetComponent<_CameraController>().targetCameraNames[operateCameraNumber]);
 				if (GUI.Button (new Rect (450, 80, 150, 20), "Change"))
 				{
-					this.GetComponent<CameraController>().ChangeCamera(operateCameraNumber);
+					this.GetComponent<_CameraController>().ChangeCamera(operateCameraNumber);
 					previousCameraNumber = operateCameraNumber;
 					SetQueryChan(0);
 				}
@@ -136,7 +136,7 @@ public class ZRNGUIController : MonoBehaviour {
 			if (GUI.Button (new Rect (400, 130, 80, 40), "Normal"))
 			{
 				operateCameraNumber = previousCameraNumber;
-				this.GetComponent<CameraController>().ChangeCamera(operateCameraNumber);
+				this.GetComponent<_CameraController>().ChangeCamera(operateCameraNumber);
 				SetQueryChan(0);
 				changePlayMode(0);
 			}
@@ -190,7 +190,7 @@ public class ZRNGUIController : MonoBehaviour {
 		{
 			QueryObjects[QueryNumber].GetComponent<FlyThroughController>().InitQuery();
 			operateCameraNumber = 100;
-			this.GetComponent<CameraController>().ChangeCamera(operateCameraNumber);
+			this.GetComponent<_CameraController>().ChangeCamera(operateCameraNumber);
 		}
 
 	}
@@ -220,7 +220,7 @@ public class ZRNGUIController : MonoBehaviour {
 		{
 			targetAICar.GetComponent<AICarMove>().InitAICar();
 			operateCameraNumber = 200;
-			this.GetComponent<CameraController>().ChangeCamera(operateCameraNumber);
+			this.GetComponent<_CameraController>().ChangeCamera(operateCameraNumber);
 		}
 
 
