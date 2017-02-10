@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class CameraAction : MonoBehaviour {
+public class _CameraAction : MonoBehaviour {
 
 	[SerializeField]
 	GameObject queryChan;
