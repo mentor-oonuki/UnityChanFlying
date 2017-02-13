@@ -43,13 +43,15 @@ public class FlyingManager : SingletonMonoBehaviour<FlyingManager> {
     private void GameStart()
     {
         VoiceManager.Instance.GameStart();
+        MusicManager.Instance.MainBgmPlay();
     }
 
     //　ゲーム終了
     private void GameEnd()
     {
-        SoundManager.instance.Goal();
+        MusicManager.Instance.MainBgmStop();
         VoiceManager.Instance.GameEnd();
+        SoundManager.instance.Goal();
     }
 
 }
