@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class MagicCircleController : MonoBehaviour {
 
-    [SerializeField]
-    private GameObject Target;
     private float Angle;
 
 
     void Start () {
-        		
+        Angle = 0.0f;		
 	}
 
 	void Update () {

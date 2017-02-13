@@ -48,6 +48,7 @@ public class FlyingManager : SingletonMonoBehaviour<FlyingManager> {
     //　ゲーム終了
     private void GameEnd()
     {
+        SoundManager.instance.Goal();
         VoiceManager.Instance.GameEnd();
     }
 
