@@ -6,14 +6,15 @@ public class MagicCircleController : MonoBehaviour {
 
     [SerializeField]
     private GameObject Target;
+    private float Angle;
+
 
     void Start () {
         		
 	}
 
 	void Update () {
-        transform.LookAt(Target.transform);
-        float Angle = Time.deltaTime * 20;
-        transform.Rotate(0.0f,0.0f, Angle);
+        Angle += Time.deltaTime * 20;
+        transform.rotation = Quaternion.Euler(0.0f,0.0f, Angle);
     }
 }
