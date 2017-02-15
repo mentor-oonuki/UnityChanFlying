@@ -44,11 +44,13 @@ public class FlyingManager : SingletonMonoBehaviour<FlyingManager> {
     {
         VoiceManager.Instance.GameStart();
         MusicManager.Instance.MainBgmPlay();
+        Timer.Instance.TimerStart();
     }
 
     //　ゲーム終了
     private void GameEnd()
     {
+        Timer.Instance.TimerStop();
         MusicManager.Instance.MainBgmStop();
         VoiceManager.Instance.GameEnd();
         SoundManager.instance.Goal();
