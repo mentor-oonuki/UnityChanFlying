@@ -17,7 +17,7 @@ public class MusicManager : SingletonMonoBehaviour<MusicManager> {
         audioSource.loop = true;
         audioSource.clip = BgmClip;
         audioSource.volume = 0.1f;
-        audioSource.Play(44100u * 2);
+        audioSource.PlayDelayed(3.0f);
     }
 
     // メインBGM停止

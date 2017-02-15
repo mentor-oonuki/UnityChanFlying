@@ -9,12 +9,12 @@ public class Timer : SingletonMonoBehaviour<Timer>
     [SerializeField]
 	private Text TimerText;
 
-	private Stopwatch stopwatch;
+	private Stopwatch stopwatch = new Stopwatch();
 
 
     private void Start()
     {
-        stopwatch = new Stopwatch();
+
     }
 
     void Update()
@@ -22,13 +22,13 @@ public class Timer : SingletonMonoBehaviour<Timer>
 		TimeSpan deltaTime = GetTimer();
         string timerString = deltaTime.Hours.ToString("D2") + ":"
             + deltaTime.Minutes.ToString("D2") + ":"
-            + deltaTime.Seconds.ToString("D2");
+            + deltaTime.Seconds.ToString("D2") + ":"
+            + deltaTime.Milliseconds.ToString("D3");
         TimerText.text = timerString;
 	}
 
 	public void TimerStart()
 	{
-        stopwatch = new Stopwatch();
         stopwatch.Reset();
 		stopwatch.Start();
 	}
