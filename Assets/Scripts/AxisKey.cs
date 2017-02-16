@@ -39,11 +39,15 @@ public class AxisKey {
 	 * 同時押しの場合は、先に押されていた方の値を返す。
 	 */
 	public float GetAxis() {
-		bool positive = Input.GetKey(positiveKey);
-		bool negative = Input.GetKey(negativeKey);
+//		bool positive = Input.GetKey(positiveKey);
+//		bool negative = Input.GetKey(negativeKey);
 
-		//同時押しの場合、先に押されていた方を優先する
-		if (holdKey == positiveKey && positive) {
+        bool positive = Input.GetKey(positiveKey);
+        bool negative = Input.GetKey(negativeKey);
+
+
+        //同時押しの場合、先に押されていた方を優先する
+        if (holdKey == positiveKey && positive) {
 			return 1f;		//holdKey は変更なし
 		}
 		if (holdKey == negativeKey && negative) {
